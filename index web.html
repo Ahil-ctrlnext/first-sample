@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classic Gift Zone</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Error handling function
+        function handleError(error) {
+            console.error("An error occurred:", error);
+            alert("Sorry, something went wrong. Please try again later.");
+        }
+
+        // Function to load video with error handling
+        function loadVideo() {
+            const videoElement = document.getElementById('video-reel');
+            videoElement.onerror = function() {
+                handleError(new Error("Failed to load video."));
+            };
+        }
+
+        window.onload = loadVideo; // Load video on window load
+    </script>
 </head>
 <body>
     <header>
@@ -20,8 +37,6 @@
             </ul>
         </nav>
     </header>
-    
-
 
     <main class="main-content" id="home">
         <section>
@@ -29,7 +44,7 @@
             <p>Classic Gift Zone specializes in unique, personalized gifts, focusing on exquisite pencil carvings. Our homemade services ensure that every gift is crafted with care, making it perfect for any occasion. Enjoy affordable pricing and prompt delivery within a week.</p>
 
             <!-- Video Reel Section -->
-            <video controls class="video-reel">
+            <video controls id="video-reel" class="video-reel">
                 <source src="Snapinsta.app_video_0D45483EB107DD4BC79444D2D841518F_video_dashinit.mp4" type="video/mp4"> <!-- Replace with your video file -->
                 Your browser does not support the video tag.
             </video>
@@ -37,15 +52,11 @@
             <h3>Featured Products</h3>
             <div class="product-gallery">
                 <img src="pp.jpg" alt="Product 1">
-                <img src="ppp.jpg" alt="Product 2">
-                <img src="pppp.jpg" alt="Product 3">
+                <img src="pppp.jpg" alt="Product 2">
+                <img src="ppp.jpg" alt="Product 3">
                 <img src="ppppp.jpg" alt="Product 4">
-            <!--    */<img src="placeholder5.jpg" alt="Product 5">
-            
-                <img src="placeholder6.jpg" alt="Product 6">
-            -->
+                
             </div>
-
         </section>
 
         <section id="about">
@@ -55,7 +66,7 @@
 
         <section id="privacy">
             <h2>Privacy Policy</h2>
-            <p><strong>Effective Date:</strong> [Insert Date]</p>
+            <p><strong>Effective Date:</strong> 18/09/2024</p>
             <p>Classic Gift Zone is committed to protecting your privacy. This policy outlines our practices regarding the collection, use, and disclosure of your personal information.</p>
 
             <h3>Information Collection</h3>
@@ -73,14 +84,14 @@
             <h3>Your Rights</h3>
             <p>You have the right to access, correct, or delete your personal information by contacting us.</p>
 
-            <p>For more details, please contact us at [Insert Contact Email].</p>
+            <p>For more details, please contact us at classicgiftzone@gmail.com.</p>
         </section>
 
         <section id="contact">
             <h2>Contact Us</h2>
             <p>If you have any inquiries or need assistance, please reach out:</p>
             <ul>
-                <li><strong>Email:</strong> [Insert Email Address]</li>
+                <li><strong>Email:</strong> classicgiftzone@gmail.com</li>
                 <li><strong>Phone:</strong> <a href="tel:+917339171615">91 7339171615</a></li>
                 <li><strong>Instagram:</strong> 
                     <a href="https://www.instagram.com/classic_giftzone?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Classic Gift Zone Instagram</a></li>
